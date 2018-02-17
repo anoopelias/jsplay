@@ -29,7 +29,10 @@ if (process.argv[2] === 'ping') {
 } else if (process.argv[2] === 'submit') {
     submit();
 } else {
-    console.log('Unknown argument :', process.argv[2])
+    if (process.argv[2]) {
+        console.log('\nUnknown argument :', process.argv[2])
+    }
+    console.log('\nUsage : \n    ping: To ping the server\n    submit: To submit request to the server\n');
 }
 
 
