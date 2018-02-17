@@ -1,0 +1,12 @@
+{
+  "name": "jsplay",
+  "version": "0.0.1",
+  "main": "index.js",
+  "author": "Anoop Elias <Anoop.Elias@solitontech.com>",
+  "license": "MIT",
+  "dependencies": {
+    "mz": "^2.7.0",
+    "request": "^2.83.0",
+    "request-debug": "^0.2.0"
+  }
+}
