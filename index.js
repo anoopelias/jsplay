@@ -4,7 +4,11 @@ const fs = require('mz/fs');
 
 function ping() {
     request(BASE + '/ping', function (error, response, body) {
-        console.log(body);
+        if (error) {
+            console.error('Error: ', error.message);
+        } else {
+            console.log(body);
+        }
     });
 }
 
