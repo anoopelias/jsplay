@@ -22,7 +22,7 @@ async function submit() {
             if (err) {
                 console.log('Error!');
             } else {
-                console.log('URL: ' + body);
+                console.log(body);
             }
         }
     );
