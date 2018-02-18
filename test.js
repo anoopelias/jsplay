@@ -11,10 +11,10 @@ async function readInput(filename) {
 
     for (let i=0; i<length; i++) {
         let line = lines[i];
-        let values = line.split(' ').filter(val => val.length);
+        let values = line.split(',').map(val => val.trim());
         points.push({
-            x: values[0],
-            y: values[1],
+            x: parseFloat(values[0]),
+            y: parseFloat(values[1]),
         })
     }
     return {

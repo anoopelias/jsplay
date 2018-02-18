@@ -19,7 +19,7 @@ class Point {
     }
 
     slopeWith(p) {
-        return Math.abs((p.y - this.y) / (p.x - this.x));
+        return (p.y - this.y) / (p.x - this.x);
     }
 
     compare(p) {
@@ -43,7 +43,6 @@ function collinear(input) {
                 point: point,
             }
         }).sort((sA, sB) => sA.slope - sB.slope);
-
         const lineSegments = groupBy(slopes, 'slope')
             .filter(group => group.values.length > 2)
             .map(group => group.values.map(slope => slope.point))
