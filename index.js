@@ -1,4 +1,4 @@
-const BASE = 'http://localhost:3000/api/v1';
+const BASE = 'https://jsplay-solitontech.herokuapp.com/api/v1';
 const request = require('request');
 const fs = require('mz/fs');
 
