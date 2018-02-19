@@ -1,9 +1,20 @@
-const BASE = 'https://jsplay-solitontech.herokuapp.com/api/v1';
+//const BASE = 'https://jsplay-solitontech.herokuapp.com/api/v1';
+const BASE = 'http://localhost:3000/api/v1';
 const request = require('request');
 const fs = require('mz/fs');
+const config = require('git-config').sync();
+
+function getGitName() {
+    return config && config.user && config.user.name;
+}
 
 function ping() {
-    request(BASE + '/ping', function (error, response, body) {
+    request({
+        url: BASE + '/ping',
+        qs: {
+            name: getGitName(),
+        },
+    }, function (error, response, body) {
         if (error) {
             console.error('Error: ', error.message);
         } else {
@@ -16,16 +27,22 @@ async function submit() {
     const file = await fs.readFile('collinear.js');
     const fileString = Buffer.from(file).toString('base64');
 
-    const req = request.post(BASE + '/submit',
-        { form: {collinear: fileString }},
-        function (err, res, body) {
-            if (err) {
-                console.log('Error!');
-            } else {
-                console.log(body);
-            }
+    const req = request.post({
+        url: BASE + '/submit',
+        form: {
+            collinear: fileString,
+        },
+        qs: {
+            name: getGitName(),
+        },
+    },
+    function (err, res, body) {
+        if (err) {
+            console.log('Error!');
+        } else {
+            console.log(body);
         }
-    );
+    });
 }
 
 if (process.argv[2] === 'ping') {
