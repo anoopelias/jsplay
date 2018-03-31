@@ -59,20 +59,20 @@ $ node test.js puzzle04.txt
 ## Submission
 Once you have completed the development, you can submit your program as below,
 
-Use 'ping' to make sure server is up and running
+Use `ping` to make sure server is up and running
 
 ```
 $ ./bin/jsplay ping
 Response to ping for anoopelias at Sun Apr 01 2018 04:33:13 GMT+0530 (IST)
 ```
 
-Use 'submit' to submit your program to the server. The server will evaluate your
+Use `submit` to submit your program to the server. The server will evaluate your
 program and respond to your request.
 
 ```
 $ ./bin/jsplay submit
 
-Submission report for anoopelias generated at Sun Apr 01 2018 04:29:30 GMT+0530 (IST)
+Submission report for anoopelias generated at Sun Apr 01 2018 04:35:13 GMT+0530 (IST)
 
 8 Puzzle:
 
@@ -86,5 +86,8 @@ Passed : 8 Puzzle should solve size 3 board tests
 Passed : 8 Puzzle should solve size 4 board tests
 Functional Tests Passed
 
+Performance Tests:
+Tests with size 4 board with 20 shuffles
+     Time: 18.095936 milliseconds
 
 ```
