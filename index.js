@@ -24,13 +24,13 @@ function ping() {
 }
 
 async function submit() {
-    const file = await fs.readFile('collinear.js');
+    const file = await fs.readFile('puzzle8.js');
     const fileString = Buffer.from(file).toString('base64');
 
     const req = request.post({
         url: BASE + '/submit',
         form: {
-            collinear: fileString,
+            'puzzle8' : fileString,
         },
         qs: {
             name: getGitName(),

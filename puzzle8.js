@@ -1,11 +1,7 @@
 
 function printBoard(board) {
-  for(let i=0; i<board.length; i++) {
-    let row = '';
-    for(let j=0; j<board[i].length; j++) {
-      row += ' ' + board[i][j];
-    }
-    console.log(row);
+  for (let i=0; i<board.length; i++) {
+    console.log(board[i].join(' '));
   }
 }
 
@@ -112,14 +108,6 @@ function puzzle8(input) {
           prev: prev,
         })
       }
-    }
-  }
-
-  if (solved) {
-    console.log('Solution');
-    for (let step of next.prev) {
-      printBoard(step);
-      console.log();
     }
   }
 
