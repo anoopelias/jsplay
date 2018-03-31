@@ -1,4 +1,4 @@
-#JsPlay Question #2 : 8 Puzzle
+# JsPlay Question #2 : 8 Puzzle
 
 Write a program to solve the 8-puzzle problem and its natural generalizations.
 
