@@ -62,9 +62,9 @@ $ node test.js puzzle8_03.txt
 7 8 6
 
 ```
- As shown above, the output array _should not_ have the final board, but the last board in the array should be one step away from a final board. A reference implementation is already provided in `puzzle8.js`.
+As shown above, the output array _should not_ have the final board, but the last board in the array should be one step away from a final board. A reference implementation is already provided in `puzzle8.js`.
 
- There could be cases where the board cannot be solved. In such cases, the function should return `null`. A test example for this is also provided. However, the reference implementation do not cover this case.
+There could be cases where the board cannot be solved. In such cases, the function should return `null`. A test example for this is also provided. However, the reference implementation do not cover this case.
 
 ```
 $ more puzzle8_03_unsolvable.txt 
@@ -77,6 +77,20 @@ $ node test.js puzzle8_03_unsolvable.txt
 Board cannot be solved
 
 ```
+
+If the input board is already solved, then the function should return an empty array,
+```
+$ more puzzle8_03_solved.txt 
+3
+ 1  2  3
+ 4  5  6
+ 7  8  0
+
+$ node test.js puzzle8_03_solved.txt 
+[]
+
+```
+
 
 ## Submission
 Once you have completed the development, you can submit your program as below,

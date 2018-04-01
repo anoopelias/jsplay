@@ -44,7 +44,7 @@ async function run() {
   }
 
   if (!output.length) {
-    printBoard(input.board);
+    console.log('[]');
     return;
   }
 
