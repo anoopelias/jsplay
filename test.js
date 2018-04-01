@@ -38,13 +38,19 @@ async function run() {
   const input = await readInput(filename);
   const output = puzzle8(input);
 
-  if (output.length) {
-    for (let i=0; i<output.length; i++) {
-      printBoard(output[i]);
-      console.log();
-    }
-  } else {
+  if (output === null) {
+    console.log('Board cannot be solved');
+    return;
+  }
+
+  if (!output.length) {
     printBoard(input.board);
+    return;
+  }
+
+  for (let i=0; i<output.length; i++) {
+    printBoard(output[i]);
+    console.log();
   }
 }
 
