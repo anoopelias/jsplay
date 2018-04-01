@@ -1,10 +1,9 @@
 const fs = require('mz/fs');
-const EOL = require('os').EOL;
 const puzzle8 = require('./puzzle8');
 
 async function readInput(filename) {
   const input = await fs.readFile(filename, 'utf8');
-  const lines = input.split(EOL);
+  const lines = input.split('\n');
   const length = parseInt(lines.shift());
   let board = [];
 
