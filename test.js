@@ -27,12 +27,25 @@ async function readInput(filename) {
   };
 }
 
+function printBoard(board) {
+  for (let i=0; i<board.length; i++) {
+    console.log(board[i].join(' '));
+  }
+}
+
 async function run() {
   const filename = process.argv[2];
   const input = await readInput(filename);
   const output = puzzle8(input);
 
-  console.log(output);
+  if (output.length) {
+    for (let i=0; i<output.length; i++) {
+      printBoard(output[i]);
+      console.log();
+    }
+  } else {
+    printBoard(input.board);
+  }
 }
 
 run();

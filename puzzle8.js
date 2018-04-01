@@ -1,10 +1,4 @@
 
-function printBoard(board) {
-  for (let i=0; i<board.length; i++) {
-    console.log(board[i].join(' '));
-  }
-}
-
 function findZero(board) {
   for(let i=0; i<board.length; i++) {
     for(let j=0; j<board[i].length; j++) {
@@ -81,7 +75,6 @@ function neighborBoards(board) {
 }
 
 function puzzle8(input) {
-  printBoard(input.board);
 
   const queue = [{ board: input.board, prev: [] }];
   let next;
