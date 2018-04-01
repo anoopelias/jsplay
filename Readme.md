@@ -31,30 +31,52 @@ input = {
 }
 ```
 
-The `board` property will give the starting board position. The size of the board is always expected to be a square. This function should return an array of consecutive boards, each of which if executed will give a solution to the 8-puzzle problem.
+The `board` property will give the starting board position. The size of the board is always expected to be a square. 
+
+This `puzzle8` function should return an array of consecutive boards, starting with the input board, each element being a step towards the solution. This array should contain the lowest number of steps towards a solution to the given input board. If there are multiple possible shortest solutions to a given input board, the function can return either of them.
 
 To test your implementation, use `test.js` as shown below,
 
 ```
-$ more puzzle04.txt
+$ more puzzle8_03.txt
 3
  0  1  3
  4  2  5
  7  8  6
 
-$ node test.js puzzle04.txt 
+$ node test.js puzzle8_03.txt 
 0 1 3
 4 2 5
 7 8 6
-[ [ [ 0, 1, 3 ], [ 4, 2, 5 ], [ 7, 8, 6 ] ],
-  [ [ 1, 0, 3 ], [ 4, 2, 5 ], [ 7, 8, 6 ] ],
-  [ [ 1, 2, 3 ], [ 4, 0, 5 ], [ 7, 8, 6 ] ],
-  [ [ 1, 2, 3 ], [ 4, 5, 0 ], [ 7, 8, 6 ] ] ]
+
+1 0 3
+4 2 5
+7 8 6
+
+1 2 3
+4 0 5
+7 8 6
+
+1 2 3
+4 5 0
+7 8 6
 
 ```
- The output should start with the initial position. Consecutive boards should be neighbors to each other, and the last board must be 1 step away from the final board. You _should not_ add the final board into the output. A reference implementation is already provided in puzzle8.js.
+ As shown above, the output array _should not_ have the final board, but the last board in the array should be one step away from a final board. A reference implementation is already provided in `puzzle8.js`.
 
- There could be cases where the board cannot be solved. In such cases, the function should return `null`.
+ There could be cases where the board cannot be solved. In such cases, the function should return `null`. A test example for this is also provided. However, the reference implementation do not cover this case.
+
+```
+$ more puzzle8_03_unsolvable.txt 
+3
+ 0  1  3
+ 4  5  2
+ 7  8  6
+
+$ node test.js puzzle8_03_unsolvable.txt 
+Board cannot be solved
+
+```
 
 ## Submission
 Once you have completed the development, you can submit your program as below,
@@ -91,3 +113,7 @@ Tests with size 4 board with 20 shuffles
      Time: 18.095936 milliseconds
 
 ```
+
+# References
+
+This problem is inspired from the [8 puzzle assignment](https://www.cs.princeton.edu/courses/archive/spr10/cos226/assignments/8puzzle.html) which is a part of Algorithms course from Princeton. More discussions about solutions are available in the link.
