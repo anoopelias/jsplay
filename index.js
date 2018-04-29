@@ -1,5 +1,5 @@
-// const BASE = 'https://stage-jsplay-solitontech.herokuapp.com/api/v1';
-const BASE = 'http://localhost:3000/api/v1';
+// const BASE = 'https://us-central1-jsplay-server.cloudfunctions.net';
+const BASE = 'http://localhost:5000/jsplay-server/us-central1';
 const request = require('request');
 const fs = require('mz/fs');
 const config = require('git-config').sync();
