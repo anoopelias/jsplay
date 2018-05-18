@@ -128,6 +128,22 @@ Tests with size 4 board with 20 shuffles
 
 ```
 
+Use `leaderboard` to see the current standings,
+
+```
+$ ./bin/jsplay leaderboard
+Leaderboard at Fri May 18 2018 06:10:03 GMT+0530 (IST)
+
+8 Puzzle:
+
+Level 1
+anoopelias Time:0.95 milliseconds
+
+Level 2
+anoopelias Time:29.773 milliseconds
+
+```
+
 # References
 
 This problem is inspired from the [8 puzzle assignment](https://www.cs.princeton.edu/courses/archive/spr10/cos226/assignments/8puzzle.html) which is a part of Algorithms course from Princeton. More discussions about solutions are available in the link.
