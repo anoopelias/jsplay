@@ -107,15 +107,14 @@ program and respond to your request.
 
 ```
 $ ./bin/jsplay submit
-
-Submission report for anoopelias generated at Sun Apr 01 2018 04:35:13 GMT+0530 (IST)
+Submission report for anoopelias generated at Fri May 18 2018 01:00:00 GMT+0000 (UTC)
 
 8 Puzzle:
 
 Functional Tests:
 Passed : 8 Puzzle should solve a 3x3 board
 Passed : 8 Puzzle should return null for a board that cannot be solved
-Passed : 8 Puzzle Solve a single element board
+Passed : 8 Puzzle should solve a single element board
 Passed : 8 Puzzle should solve a board of size 2
 Passed : 8 Puzzle should return empty array for a solved board
 Passed : 8 Puzzle should solve size 3 board tests
@@ -123,9 +122,10 @@ Passed : 8 Puzzle should solve size 4 board tests
 Functional Tests Passed
 
 Performance Tests:
-Tests with size 4 board with 20 shuffles
-     Time: 18.095936 milliseconds
-
+Level 1: Tests with size 3 board
+     Time: 2.2383740000004764 milliseconds
+Level 2: Tests with size 4 board
+     Time: Timeout (>300 ms)
 ```
 
 Use `leaderboard` to see the current standings,
