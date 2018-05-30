@@ -147,3 +147,43 @@ anoopelias Time:29.773 milliseconds
 # References
 
 This problem is inspired from the [8 puzzle assignment](https://www.cs.princeton.edu/courses/archive/spr10/cos226/assignments/8puzzle.html) which is a part of Algorithms course from Princeton. More discussions about solutions are available in the link.
+
+# Testcases
+
+In case there are testcase failures, you can manually run each of the test cases as below and see where you are going wrong,
+
+- 8 Puzzle should solve a 3x3 board
+```
+    $ node test.js testcase1.txt # Expected output of size 4
+```
+ - 8 Puzzle should return null for a board that cannot be solved
+```
+    $ node test.js testcase2.txt # Expected output null
+```
+ - 8 Puzzle should solve a single element board
+```
+    $ node test.js testcase3.txt # Expected output empty array ([])
+```
+ - 8 Puzzle should solve a board of size 2
+```
+    $ node test.js testcase4.txt # Expected output size 4
+```
+ - 8 Puzzle should return empty array for a solved board
+```
+    $ node test.js testcase5.txt # Expected output empty array ([])
+```
+ - 8 Puzzle should solve size 3 board tests
+```
+    $ node test.js testcase6_1.txt # Expected output size 4
+    $ node test.js testcase6_2.txt # Expected output size 6
+    $ node test.js testcase6_3.txt # Expected output size 6
+    $ node test.js testcase6_4.txt # Expected output size 8
+```
+ - 8 Puzzle should solve size 4 board tests
+```
+    $ node test.js testcase7_1.txt # Expected output size 10
+    $ node test.js testcase7_2.txt # Expected output size 6
+    $ node test.js testcase7_3.txt # Expected output size 8
+    $ node test.js testcase7_4.txt # Expected output size 8
+```
+
